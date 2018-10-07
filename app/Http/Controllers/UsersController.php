@@ -8,12 +8,17 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\UserRequest;
+use App\Role;
+use Illuminate\Support\Facades\Redirect;
 
 class UsersController extends Controller
 {
     public function index()
     {
       $users = User::orderBy('id', 'ASC')->paginate(10);
+      $users->each(function($users){
+        $users->role;
+        });
       return view('admin.users.index')->with('users', $users);
     }
     /**
@@ -23,7 +28,9 @@ class UsersController extends Controller
     */
     public function create()
     {
-      return view('admin.users.create');
+      $roles = Role::pluck('name', 'id');
+      return view('admin.users.create')
+       ->with('roles', $roles);
     }
     /**
     *
@@ -34,7 +41,10 @@ class UsersController extends Controller
     {
       $user = new User($request->all());
       $user->password = bcrypt($request->password);
+
       $user->save();
+
+      $user->roles()->sync($request->roles);
 
       Flash::success("Usuario " . $user->name . " Creado Exitosamente");
 
@@ -58,7 +68,14 @@ class UsersController extends Controller
     public function edit($id)
     {
       $user = User::find($id);
-      return view('admin.users.edit')->with('user', $user);
+
+      $roles = Role::pluck('name', 'id');
+
+      $my_roles = $user->roles->pluck('id')->ToArray();
+
+      return view('admin.users.edit')->with('user', $user)
+       ->with('roles', $roles)
+       ->with('my_roles', $my_roles);
     }
     /**
     *
@@ -73,6 +90,8 @@ class UsersController extends Controller
       $user->email = $request->email;
       $user->type = $request->type;
       $user->save();
+
+      $user->roles()->sync($request->roles);
 
       Flash::warning("Usuario " . $user->name . " Editado Exitosamente");
 

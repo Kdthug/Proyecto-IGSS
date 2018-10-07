@@ -163,6 +163,7 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         App\Providers\DropboxServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

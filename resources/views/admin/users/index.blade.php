@@ -21,15 +21,7 @@
           <td>{{ $user->name }}</td>
           <td>{{ $user->email }}</td>
           <td>
-            @if($user->type == "admin")
-              <span class="badge badge-primary">{{ $user->type }}</span>
-            @elseif ($user->type == "editor")
-              <span class="badge badge-info">{{ $user->type }}</span>
-            @elseif ($user->type == "client")
-              <span class="badge badge-success">{{ $user->type }}</span>
-            @else
-              <span class="badge badge-secondary">{{ $user->type }}</span>
-            @endif
+            {{ $user->type }}
           </td>
           <td><a href="{{ route('admin.users.destroy', $user->id) }}" onclick="return confirm('¿Esta seguro que quiere Eliminarlo?')" class="btn btn-danger">Eliminar
               </a>

@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@yield('title', 'Default') | Logged: Admin</title>
+    <title>@yield('title', 'Default') | Logged: Editor</title>
+
 
     <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/business.css') }}">
@@ -18,22 +19,19 @@
 
 <body>
   <style CSS>
-  .dropdown-menu .sub-menu {
-      left: 100%;
-      position: relative;
-      top: 0;
-      visibility: hidden;
-      margin-top: -1px;
-  }
+  .navbar-nav li:hover > ul.dropdown-menu {
+display: block;
+}
+.dropdown-submenu {
+position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+top:0;
+left:100%;
+margin-top:-6px;
+}
 
-  .dropdown-menu li:hover .sub-menu {
-      visibility: visible;
-  }
-
-  .dropdown:hover li:hover> .dropdown-menu {
-      display: block;
-  }
-  /* rotate caret on hover */
+/* rotate caret on hover */
 .dropdown-menu > li > a:hover:after {
 text-decoration: underline;
 transform: rotate(-90deg);
@@ -41,7 +39,7 @@ transform: rotate(-90deg);
       }
   </style>
 
-  @include('admin.template.partials.nav')
+  @include('admin.template.partials.naveditor')
   <div class="container">
     <section>
       <h1 class="my-4">@yield('h1')</h1>

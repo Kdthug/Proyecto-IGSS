@@ -16,7 +16,12 @@ class File extends Model
     protected $table = "files";
 
 
-    protected $fillable = ['name', 'size', 'extension', 'public_url'];
+    protected $fillable = ['name', 'description' , 'size', 'extension', 'public_url'];
+
+    public function tags()
+    {
+      return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
 
     public function scopeSearch($query, $name)
     {

@@ -1,4 +1,4 @@
-@extends('admin.template.main')
+@extends('admin.template.maineditor')
 
 @section('title', 'Index Documentos')
 
@@ -6,26 +6,10 @@
 
 @section('content')
 
-<nav class="navbar navbar-expand-md navbar-light" style="background-color: #e3f2fd;">
-  <a class="navbar-brand pb-2" href="#">Menu de Documentos</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-                @foreach ($menus as $key => $item)
-                    @if ($item['parent'] != 0)
-                        @break
-                    @endif
-                    @include('partials.menu-item', ['item' => $item])
-                @endforeach
-            </ul>
-        </div>
-    </div>
-</nav>
 
-<a href="{{ route('admin.files.create')}}" class="btn btn-primary">Subir Documento</a>
-  {!! Form::open(['route' => 'admin.files.index', 'method' => 'GET', 'class' => 'navbar-form-right']) !!}
+
+<a href="{{ route('editor.create')}}" class="btn btn-primary">Subir Documento</a>
+  {!! Form::open(['route' => 'editor.index', 'method' => 'GET', 'class' => 'navbar-form-right']) !!}
       <div class="form-group">
 
         {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Search file..', 'aria-describedby' => 'search']) !!}
@@ -62,8 +46,6 @@
         </form>
     </td>
 </tr>
-
-
 @endforeach
   </tbody>
 </table>

@@ -21,7 +21,7 @@
 
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/"><img src="images/logo-bellatrix.png" width="150" height="80" alt="">
         </a>
@@ -31,13 +31,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Conocenos</a>
+              <a class="nav-link" href="empresa">Conocenos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Servicios</a>
+              <a class="nav-link" href="servicios">Servicios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
+              <a class="nav-link" href="contacto">Contacto</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,7 +109,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Leer Más</a>
+              <a href="empresa" class="btn btn-primary">Leer Más</a>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Leer Más</a>
+              <a href="filosofia" class="btn btn-primary">Leer Más</a>
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Leer Más</a>
+              <a href="servicios" class="btn btn-primary">Leer Más</a>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Leer Más</a>
+              <a href="clientes" class="btn btn-primary">Leer Más</a>
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@
                 <a href="#">Novedades</a>
               </h4>
               <p class="card-text">Hemos formulado la Cartera de Cursos  a ofrecer durante el año 2013, los cuales se explicitan a continuación:</p>
-              
+
             </div>
           </div>
         </div>

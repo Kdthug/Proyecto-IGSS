@@ -24,8 +24,13 @@
       </div>
 
       <div class="form-group">
-        {!! Form::label('type', 'Perfil') !!}
+        {!! Form::label('type', 'Tipo de Usuario') !!}
         {!! Form::select('type', ['' => 'Seleccione un Perfil ', 'visit' => 'Visita', 'client' => 'Cliente', 'editor' => 'Editor', 'admin' => 'Administrador'], null, ['class' => 'form-control']) !!}
+      </div>
+
+      <div class="form-group">
+        {!! Form::label('role_id', 'Rol de Usuario') !!}
+        {!! Form::select('role_id', $roles, null, ['class' => 'form-control', 'placeholder' => 'Seleccione un rol', 'required']) !!}
       </div>
 
       <div class="form-group">
