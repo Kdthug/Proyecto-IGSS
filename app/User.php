@@ -67,4 +67,9 @@ public function hasRole($role)
     }
     return false;
 }
+
+public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }

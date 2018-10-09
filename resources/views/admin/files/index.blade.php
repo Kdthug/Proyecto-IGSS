@@ -24,6 +24,9 @@
     </div>
 </nav>
 
+<div class="container">
+  <section>
+    
 <a href="{{ route('admin.files.create')}}" class="btn btn-primary">Subir Documento</a>
   {!! Form::open(['route' => 'admin.files.index', 'method' => 'GET', 'class' => 'navbar-form-right']) !!}
       <div class="form-group">
@@ -68,7 +71,7 @@
   </tbody>
 </table>
 
-
+</section>
 
 
 

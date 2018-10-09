@@ -24,6 +24,13 @@ Route::get('tags/{name}', [
     'as' => 'file.search.tag'
 ])->middleware('role:admin');
 
+Route::get('menu/{id}', [
+    'uses' => 'filesController@searchMenu',
+    'as' => 'file.search.menu'
+])->middleware('role:admin');
+
+
+
 Route::get('editor', 'FilesController@indexeditor')->name('editor.index')
 ->middleware('role:editor');
 

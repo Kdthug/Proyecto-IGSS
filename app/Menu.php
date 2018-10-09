@@ -36,4 +36,13 @@ class Menu extends Model
       }
       return $menus->menuAll = $menuAll;
   }
+
+  public function files()
+  {
+    return $this->belongsToMany('App\File')->withTimestamps();
+  }
+  public function scopeSearchMenu($query, $id)
+  {
+    return $query->where('id', '=', "$id");
+  }
 }

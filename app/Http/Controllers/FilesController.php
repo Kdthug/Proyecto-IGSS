@@ -9,6 +9,9 @@ use App\Tag;
 use Illuminate\Support\Facades\Storage;
 use Laracasts\Flash\flash;
 use App\Menu;
+Use App\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CambioDocumentos;
 
 class FilesController extends Controller
 {
@@ -37,6 +40,7 @@ class FilesController extends Controller
      // Obtenemos todos los registros de la tabla files
      // y retornamos la vista files con los datos.
      $files = File::search($request->name)->orderBy('id', 'DESC')->paginate(10);
+
      return view('editor.index')->with('files', $files);
      //$files = File::orderBy('created_at', 'desc')->get();
 
@@ -47,11 +51,13 @@ class FilesController extends Controller
  {
      // Obtenemos todos los registros de la tabla files
      // y retornamos la vista files con los datos.
-     $files = File::search($request->name)->orderBy('id', 'DESC')->paginate(10);
+     $files = File::where('user_id', $request->user()->id)->get();
+
      return view('client.index')->with('files', $files);
      //$files = File::orderBy('created_at', 'desc')->get();
-
      return view('client.index', compact('files'));
+
+
  }
 
  public function store(Request $request)
@@ -75,14 +81,17 @@ class FilesController extends Controller
          'description' => $request['description'],
          'extension' => $request->file('file')->getClientOriginalExtension(),
          'size' => $response['size'],
-         'public_url' => $response['url']
+         'public_url' => $response['url'],
+         'user_id' => $request['user_id']
 
      ]);
 
 
      $file->tags()->sync($request->tags);
+     $file->menus()->sync($request->menus);
 
      Flash::success('Documento ' . ' Subido Exitosamente');
+     Mail::to('agsanchezu@gmail.com')->send(new CambioDocumentos($file));
      return back();
  }
 
@@ -158,9 +167,16 @@ class FilesController extends Controller
 
  public function create()
  {
-    $tags = Tag::pluck('name', 'id');
-     return view('admin.files.create')
-     ->with('tags', $tags);
+   $tags = Tag::pluck('name', 'id');
+   $menus = Menu::pluck('name', 'id');
+   $users = User::pluck('name', 'id');
+    return view('admin.files.create')
+    ->with('menus', $menus)->with('tags', $tags)->with('users', $users);
+
+
+
+
+
  }
  public function createditor()
  {
@@ -181,7 +197,16 @@ class FilesController extends Controller
 
  }
 
-}
+ public function searchMenu($id)
+ {
+     $menu = Menu::SearchMenu($id)->first();
+     $files = $menu->files;
+
+
+
+     return view('admin.files.index')->with('files', $files);
+
+ }
     /**
      * Display a listing of the resource.
      *
@@ -192,4 +217,4 @@ class FilesController extends Controller
 //      $files = File::all();
 //      return view('admin.files.index')->with('files', $files);
 //    }
-//}
+}

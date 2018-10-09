@@ -19,7 +19,15 @@
 </div>
 <div class="form-group">
   {!! Form::label('tags', 'Tags') !!}
-  {!! Form::select('tags', $tags, null, ['class' => 'form-control', 'placeholder' => 'Seleccione un Tag', 'required']) !!}
+  {!! Form::select('tags', $tags, null, ['class' => 'form-control', 'placeholder' => 'Seleccione un Tag']) !!}
+</div>
+<div class="form-group">
+  {!! Form::label('menu', 'Categoría') !!}
+  {!! Form::select('menus', $menus, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una Categoria', 'required']) !!}
+</div>
+<div class="form-group">
+  {!! Form::label('user_id', 'Usuarios') !!}
+  {!! Form::select('user_id', $users, null, ['class' => 'form-control', 'placeholder' => 'Seleccione un usuario', 'required']) !!}
 </div>
 <div class="form-group">
 <button class="btn btn-primary" type="submit">Subir</button>
