@@ -10,7 +10,7 @@ class File extends Model
 
     public function getSizeInKbAttribute()
     {
-      return number_format($this->size / 1024000, 1);
+      return number_format($this->size / 1024, 1);
     }
 
     protected $table = "files";
@@ -39,7 +39,7 @@ class File extends Model
     }
 
 
-    
+
 
   //  public function article()
   //  {

@@ -101,6 +101,8 @@ Route::prefix('admin')->group(function(){
   Route::get('/files/{file}/download', 'FilesController@download')->name('admin.files.download');
 
   Route::get('/files/create', 'FilesController@create')->name('admin.files.create')->middleware('role:admin');
+
+
 });
 
 Auth::routes();

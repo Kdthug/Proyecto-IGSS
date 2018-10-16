@@ -51,7 +51,7 @@ class FilesController extends Controller
  {
      // Obtenemos todos los registros de la tabla files
      // y retornamos la vista files con los datos.
-     $files = File::where('user_id', $request->user()->id)->get();
+     $files = File::where('user_id', $request->user()->id)->search($request->name)->get();
 
      return view('client.index')->with('files', $files);
      //$files = File::orderBy('created_at', 'desc')->get();
@@ -91,7 +91,7 @@ class FilesController extends Controller
      $file->menus()->sync($request->menus);
 
      Flash::success('Documento ' . ' Subido Exitosamente');
-     Mail::to('agsanchezu@gmail.com')->send(new CambioDocumentos($file));
+     Mail::to('agsanchezu@gmail.com', '$user->email')->send(new CambioDocumentos($file));
      return back();
  }
 
@@ -217,4 +217,6 @@ class FilesController extends Controller
 //      $files = File::all();
 //      return view('admin.files.index')->with('files', $files);
 //    }
+
+
 }
