@@ -2,16 +2,18 @@
 
 @section('title', 'Index Usuarios')
 
+@section('h1', 'Usuarios')
+
 @section('content')
 <a href="{{ route('admin.users.create')}}" class="btn btn-primary">Crear Usuario</a>
   <table class="table table-striped table-bordered">
     <thead class="thead-light">
       <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Acción</th>
+        <th style="background-color:#4CAF50" scope="col"><font color="#FDFEFE">ID</font></th>
+        <th style="background-color:#4CAF50" scope="col"><font color="#FDFEFE">Nombre</font></th>
+        <th style="background-color:#4CAF50" scope="col"><font color="#FDFEFE">Correo</font></th>
+        <th style="background-color:#4CAF50" scope="col"><font color="#FDFEFE">Tipo</font></th>
+        <th style="background-color:#4CAF50" scope="col"><font color="#FDFEFE">Acción</font></th>
       </tr>
     </thead>
     <tbody>

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar-laravel bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-laravel bg-primary">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            IGSS
+        <a class="navbar-brand" href="{{ url('/') }}">Inicio
+
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -20,15 +20,11 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('admin.users.index') }}">Administración de Usuarios</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.articles.index') }}">Administración de Articulos</a>
-                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('admin.files.index') }}">Administración de Documentos</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.groups.index') }}">Administración de Grupos</a>
-                </li>
+
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('admin.tags.index') }}">Administración de Tags</a>
                 </li>
@@ -53,4 +49,4 @@
           </ul>
       </div>
   </div>
-</nav>
+</nav><br /><br />

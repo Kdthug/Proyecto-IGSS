@@ -12,6 +12,6 @@
       </div>
 
         {!! Form::submit('Crear', ['class' => 'btn btn-primary']) !!}
-  {!! Form::close() !!}
+  {!! Form::close() !!}<br /><br />
 
 @endsection

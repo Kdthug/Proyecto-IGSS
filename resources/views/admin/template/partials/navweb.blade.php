@@ -21,7 +21,7 @@
 
 
     <!-- Navigation -->
-    <nav class="navbar  navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar  navbar-expand-lg navbar-dark bg-primary fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/"><img src="images/logo-bellatrix.png" width="150" height="80" alt="">
         </a>
@@ -60,4 +60,4 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav><br/><br/>

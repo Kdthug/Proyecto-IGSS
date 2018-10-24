@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('admin.template.mainweb')
+
+@section('title', 'Login')
+
+
 
 @section('content')
 <div class="container">

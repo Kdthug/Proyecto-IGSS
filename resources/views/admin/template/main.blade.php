@@ -18,12 +18,35 @@
 
 <body>
   <style CSS>
+  .dropdown-menu  {
+
+      background-color: #f1f1f1;
+
+      min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+
   .dropdown-menu .sub-menu {
       left: 100%;
       position: relative;
       top: 0;
       visibility: hidden;
       margin-top: -1px;
+      background-color: #f1f1f1;
+      min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+
+  .dropdown-menu a {
+
+    color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+
   }
 
   .dropdown-menu li:hover .sub-menu {
@@ -35,9 +58,13 @@
   }
   /* rotate caret on hover */
 .dropdown-menu > li > a:hover:after {
-text-decoration: underline;
+
+
 transform: rotate(-90deg);
 }
+.dropdown-menu a:hover {background-color: #ddd;}
+
+
       }
   </style>
 
