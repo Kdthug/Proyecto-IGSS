@@ -106,7 +106,7 @@
           <div class="card h-100">
             <h4 class="card-header">Empresa</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Conoce quienes somos y nuestra visión.</p>
             </div>
             <div class="card-footer">
               <a href="empresa" class="btn btn-primary">Leer Más</a>
@@ -117,7 +117,7 @@
           <div class="card h-100">
             <h4 class="card-header">Filosofía</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+              <p class="card-text">Conoce sobre nuestra filosofía</p>
             </div>
             <div class="card-footer">
               <a href="filosofia" class="btn btn-primary">Leer Más</a>
@@ -128,7 +128,7 @@
           <div class="card h-100">
             <h4 class="card-header">Servicios</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Conoce los servicios que prestamos en nuestra empresa.</p>
             </div>
             <div class="card-footer">
               <a href="servicios" class="btn btn-primary">Leer Más</a>
@@ -139,7 +139,7 @@
           <div class="card h-100">
             <h4 class="card-header">Clientes</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Conoce quienes son nuestros clientes acualmente.</p>
             </div>
             <div class="card-footer">
               <a href="clientes" class="btn btn-primary">Leer Más</a>
@@ -150,7 +150,7 @@
           <div class="card h-100">
             <h4 class="card-header">Socios Estratégicos</h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <p class="card-text">Conoce a nuestros socios</p>
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Leer Más</a>
